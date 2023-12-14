@@ -23,12 +23,12 @@ converter();
 
 function converter() {
     if(selectedCurrency.value === 'eur') {
-        valueConverted = inputValue / 5,36;
+        valueConverted = inputValue.value / 5.37;
         result.innerHTML = valueFormatter('pt-BR', 'EUR');
 
         animateResult();
     }else if(selectedCurrency.value === 'dol') {
-        valueConverted = inputValue / 4,97;
+        valueConverted = inputValue.value / 4.97;
         result.innerHTML = valueFormatter('en-US', 'USD');
         
         animateResult();
@@ -40,7 +40,7 @@ function converter() {
 
 
 function valueFormatter(Locale, currency) {
-    const value = valueConverted.toLocaleString('${Locale}', {style: 'currency', currency: '${currency}'});
+    const value = valueConverted.toLocaleString(`${Locale}`, {style: 'currency', currency: `${currency}`});
     return `<span>🤑</span> ${value} <span>🤑</span>`; 
 };
 

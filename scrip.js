@@ -16,10 +16,8 @@ function handleSubmit(e) {
         alert('Escolha uma moeda!');
         return;
     }
-
+    converter();
 };
-
-converter();
 
 function converter() {
     if(selectedCurrency.value === 'eur') {
